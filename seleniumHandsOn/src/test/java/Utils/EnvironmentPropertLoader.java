@@ -12,7 +12,8 @@ public class EnvironmentPropertLoader {
 
 	public static String getPropertyValue(String propertyName) throws IOException {
 		
-		String propFileName = "C:\\Users\\09191H744\\Desktop\\PriyankaPawar\\FullStackTester\\FullStackHandsOn\\seleniumHandsOn\\src\\main\\resources\\Config\\config.properties";
+		String propFileName = "C:\\Users\\09191H744\\git\\Selenium_Project_MoneyControl\\seleniumHandsOn\\src\\main\\resources\\Config\\config.properties";
+		
 		File file = new File(propFileName);
 		  
 		FileInputStream fileInput = null;

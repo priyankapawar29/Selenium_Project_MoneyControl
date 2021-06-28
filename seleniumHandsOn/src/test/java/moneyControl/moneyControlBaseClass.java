@@ -14,12 +14,13 @@ import CommonMethods.commonMethods;
 import Utils.EnvironmentPropertLoader;
 import moneyControlWebsite.moneyControlHomePage;
 import moneyControlWebsite.moneyControlMainPage;
+import moneyControlWebsite.shareDetailsPage;
 
 public class moneyControlBaseClass {
 	WebDriver driver = null;
 	protected static moneyControlMainPage moneyControlMainPageObj;
 	protected static moneyControlHomePage moneyControlHomePageObj;
-  
+    protected static shareDetailsPage shareDetailsPageObj;
 	@SuppressWarnings("deprecation")
 	@BeforeTest
 	public void setUp() throws IOException {
@@ -29,10 +30,11 @@ public class moneyControlBaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(EnvironmentPropertLoader.getPropertyValue("moneyControlWebsite"));
-		driver.findElement(By.xpath("/html/body/div/div[1]/span/a")).click();
+//		driver.findElement(By.xpath("/html/body/div/div[1]/span/a")).click();
 		commonMethods.longWait();
 		moneyControlMainPageObj	= PageFactory.initElements(driver, moneyControlMainPage.class);
 		moneyControlHomePageObj = PageFactory.initElements(driver, moneyControlHomePage.class);
+		shareDetailsPageObj = PageFactory.initElements(driver, shareDetailsPage.class);
 	}
 	
 		

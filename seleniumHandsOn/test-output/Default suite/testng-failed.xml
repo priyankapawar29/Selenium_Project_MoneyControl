@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="moneyControl.moneyControlUseCase1">
+      <class name="moneyControl.moneyControlUseCase2">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="loginSuccess"/>
+          <include name="searchStockdetails"/>
         </methods>
-      </class> <!-- moneyControl.moneyControlUseCase1 -->
+      </class> <!-- moneyControl.moneyControlUseCase2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
